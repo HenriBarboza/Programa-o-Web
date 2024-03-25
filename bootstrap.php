@@ -77,7 +77,25 @@ $r->post('/exercicio2/resposta', function(){
 });
 
 
+# Exercicio 3
 
+$r->get('/exercicio3/form', function () {
+    include("listaExercicios2/exercicio3.html");
+});
+
+$r->post('/exercicio3/resposta', function(){
+    $num1 = $_POST["num1"];
+    $num2 = $_POST["num2"];
+
+    $resposta = $num1 + $num2;
+
+    if($num1 == $num2){
+        return $resposta * 3 ;
+    } else {
+        return $resposta;
+    }
+
+});
 
 #ROTAS
 
