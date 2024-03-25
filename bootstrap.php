@@ -97,6 +97,20 @@ $r->post('/exercicio3/resposta', function(){
 
 });
 
+# Exercicio 4
+
+$r->get('/exercicio4/form', function (){
+    include("listaExercicios2/exercicio4.html");
+});
+
+$r->post('/exercicio1/resposta', function(){
+    $num = $_POST['num'];
+
+    for($x = 1; $x <= 10;$x++){
+        echo "<h1>". $num."x".$x ." = ".($num * $x) ."</h1>";  
+    }
+});
+
 #ROTAS
 
 $resultado = $r->handler();
