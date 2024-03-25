@@ -55,6 +55,28 @@ $r->post('/exercicio1/resposta', function(){
 
 });
 
+# Exercício 2
+
+$r->get('/exercicio2/form', function (){
+    include("listaExercicios2/exercicio2.php");
+}); 
+
+$r->post('/exercicio2/resposta', function(){
+    $numeros = array();
+    $posicaoMenorValor = 0;
+    $menorValor = $_POST["numero1"];
+    for ($i = 1; $i <= 7; $i++) {
+        $numero = $_POST["numero$i"];
+        array_push($numeros, $numero);
+        if ($numero < $menorValor) {
+            $menorValor = $numero;
+            $posicaoMenorValor = $i;
+        }
+    }
+    echo "<p>O menor valor é $menorValor e está na posição $posicaoMenorValor.</p>";
+});
+
+
 
 
 #ROTAS
