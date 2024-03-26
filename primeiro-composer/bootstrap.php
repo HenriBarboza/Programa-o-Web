@@ -75,6 +75,7 @@ $r->post('/exercicio2/resposta', function () {
 });
 
 
+
 # Exercicio 3
 
 $r->get('/exercicio3/form', function () {
@@ -184,6 +185,26 @@ $r->post('/exercicio8/resposta', function () {
         return "Sera necessário " . $latasNecessarias . " lata(s), custando um total de " . $precoFinal . " reais.";
     };
 });
+
+# Exercicio 9
+
+$r->get('/exercicio9/form', function () {
+    include ("listaExercicios2/exercicio9.html");
+});
+
+$r->post('/exercicio9/resposta', function () {
+    $anoNasc = $_POST['num'];
+
+    $resposta1 = date('Y') - $anoNasc ;
+    $resposta2 = $resposta1 * 365;
+    $resposta3 = 2025 - $anoNasc; 
+
+    echo "A) A pessoa tem ". $resposta1. " ano(s).<br>
+          B) A pessoa já viveu ". $resposta2. " dias.<br>
+          C) Em 2025 a pessoa terá ". $resposta3. " ano(s).";
+});
+
+
 
 #ROTAS
 
