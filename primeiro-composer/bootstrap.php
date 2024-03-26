@@ -121,7 +121,7 @@ $r->post('/exercicio5/resposta', function () {
     if ($num == 0) {
         return $resposta;
     } else {
-        for($num;$num > 1; $num--) {
+        for ($num; $num > 1; $num--) {
             $resposta = $resposta * $num;
         }
         return $resposta;
@@ -141,12 +141,12 @@ $r->post('/exercicio6/resposta', function () {
 
 
     if ($num1 == $num2) {
-        return "Números iguais a ".$num1;
+        return "Números iguais a " . $num1;
     } else {
-        if($num1 > $num2){
-            return $num2. " " . $num1;
-        } else{
-            return $num1. " " . $num2;
+        if ($num1 > $num2) {
+            return $num2 . " " . $num1;
+        } else {
+            return $num1 . " " . $num2;
         }
     }
 
@@ -163,7 +163,25 @@ $r->post('/exercicio7/resposta', function () {
     if ($num <= 0) {
         return "Insíra um valor válido.";
     } else {
-        return $num * 100 ."cm";
+        return $num * 100 . "cm";
+    };
+});
+
+# Exercício 8
+
+$r->get('/exercicio8/form', function () {
+    include ("listaExercicios2/exercicio8.html");
+});
+
+$r->post('/exercicio8/resposta', function () {
+    $tamParede = $_POST['num'];
+    if ($tamParede <= 0) {
+        return "Insíra um valor válido.";
+    } else {
+        $litrosNecessarios = $tamParede / 3;
+        $latasNecessarias = ceil($litrosNecessarios / 18);
+        $precoFinal = $latasNecessarias * 80.00;
+        return "Sera necessário " . $latasNecessarias . " lata(s), custando um total de " . $precoFinal . " reais.";
     };
 });
 
