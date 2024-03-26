@@ -204,7 +204,30 @@ $r->post('/exercicio9/resposta', function () {
           C) Em 2025 a pessoa terá ". $resposta3. " ano(s).";
 });
 
+# Exercicio 10
 
+$r->get('/exercicio10/form', function () {
+    include ("listaExercicios2/exercicio10.html");
+});
+
+$r->post('/exercicio10/resposta', function () {
+    $peso = $_POST['peso'];
+    $altura = $_POST['altura'];
+
+    $imc = $peso / ($altura) ** 2;
+
+    if ($imc < 18.5) {
+       return "Seu Imc é " . $imc . " e sua classificação é magreza";
+    } elseif ($imc >= 18.5 && $imc <= 24.9) {
+        return "Seu Imc é " . $imc . " e sua classificação é normal";
+    } elseif ($imc >= 25.0 && $imc <= 29.9) {
+        return "Seu Imc é " . $imc . ", sua classificação é sobrepeso e obesidade grau I";
+    } elseif ($imc >= 30.0 && $imc <= 39.9) {
+        return "Seu Imc é " . $imc . ", sua classificação é obesidade e obesidade grau II";
+    } elseif ($imc >= 40.0) {
+        return "Seu Imc é " . $imc . ", sua classificação é obesidade grave e obesidade grau III";
+    }
+});
 
 #ROTAS
 
