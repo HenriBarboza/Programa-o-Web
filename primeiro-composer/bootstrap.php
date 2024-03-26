@@ -152,6 +152,21 @@ $r->post('/exercicio6/resposta', function () {
 
 });
 
+# Exercício 7
+
+$r->get('/exercicio7/form', function () {
+    include ("listaExercicios2/exercicio7.html");
+});
+
+$r->post('/exercicio7/resposta', function () {
+    $num = $_POST['num'];
+    if ($num <= 0) {
+        return "Insíra um valor válido.";
+    } else {
+        return $num * 100 ."cm";
+    };
+});
+
 #ROTAS
 
 $resultado = $r->handler();
