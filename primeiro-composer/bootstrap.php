@@ -103,13 +103,28 @@ $r->get('/exercicio4/form', function (){
     include("listaExercicios2/exercicio4.html");
 });
 
-$r->post('/exercicio1/resposta', function(){
+$r->post('/exercicio4/resposta', function(){
     $num = $_POST['num'];
 
     for($x = 1; $x <= 10;$x++){
         echo "<h1>". $num."x".$x ." = ".($num * $x) ."</h1>";  
     }
 });
+
+# Exercicio 5
+
+$r->get('/exercicio5/form', function (){
+    include("listaExercicios2/exercicio4.html");
+});
+
+$r->post('/exercicio5/resposta', function(){
+    $num = $_POST['num'];
+
+    for($x = 1; $x <= 10;$x++){
+        echo "<h1>". $num."x".$x ." = ".($num * $x) ."</h1>";  
+    }
+});
+
 
 #ROTAS
 
