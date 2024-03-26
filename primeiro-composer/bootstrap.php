@@ -128,7 +128,29 @@ $r->post('/exercicio5/resposta', function () {
     };
 });
 
+# Exercício 6
 
+$r->get('/exercicio6/form', function () {
+    include ("listaExercicios2/exercicio6.html");
+});
+
+$r->post('/exercicio6/resposta', function () {
+    $num1 = $_POST["num1"];
+    $num2 = $_POST["num2"];
+
+
+
+    if ($num1 == $num2) {
+        return "Números iguais a ".$num1;
+    } else {
+        if($num1 > $num2){
+            return $num2. " " . $num1;
+        } else{
+            return $num1. " " . $num2;
+        }
+    }
+
+});
 
 #ROTAS
 
