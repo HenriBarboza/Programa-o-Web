@@ -1,0 +1,14 @@
+{
+    "name": "php/projeto_banco",
+    "autoload": {
+        "psr-4": {
+            "Php\\ProjetoBanco\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Henri Barboza e Rogerin"
+        }
+    ],
+    "require": {}
+}
