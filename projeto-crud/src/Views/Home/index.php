@@ -25,8 +25,8 @@
             </div>
             <div class="col-6 container">
                 <h2>Curso</h2>
-                <a href="" class="btn btn-primary ">Visualizar</a>
-                <a href="" class="btn btn-success ">Adicionar</a>
+                <a href="/curso/visualizar" class="btn btn-primary ">Visualizar</a>
+                <a href="/curso/inserir" class="btn btn-success ">Adicionar</a>
             </div>
             <div class="col-6 container">
                 <h2>Matrícula</h2>

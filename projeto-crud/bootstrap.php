@@ -35,6 +35,17 @@ $r->post('/professor/novo',
 $r->get('/professor/visualizar',
     'Php\ProjetoBanco\Controllers\ProfessorController@index');
 
+# `Curso
+
+$r->get('/curso/inserir',
+    'Php\ProjetoBanco\Controllers\CursoController@inserir');
+
+$r->post('/curso/novo',
+    'Php\ProjetoBanco\Controllers\CursoController@novo');
+
+$r->get('/curso/visualizar',
+    'Php\ProjetoBanco\Controllers\CursoController@index');
+
 
 ## Fim das rotas
 

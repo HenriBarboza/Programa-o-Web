@@ -32,7 +32,7 @@ create table curso
 create table matricula
    (id_alu int not null,
     id_cur int not null,
-	periodo varchar(30),
+	 periodo varchar(30),
     data_matricula timestamp default current_timestamp,
     primary key (id_alu, id_cur),
     foreign key (id_alu) references aluno (id),
