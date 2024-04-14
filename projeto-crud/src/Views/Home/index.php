@@ -12,21 +12,37 @@
 <body>
     <div class="container mt-4">
         <h1>Projeto 2 - MVC</h1>
-        <div>
-            <h2>Eleitores</h2>
-        <a href="eleitores" class="btn btn-primary me-3 mt-3">Vizualizar</a>
-            <h2>Municipio</h2>
-        <a href="eleitores" class="btn btn-primary me-3 mt-3">Vizualizar</a>
-            <h2>Cadidato</h2>
-        <a href="eleitores" class="btn btn-primary me-3 mt-3">Vizualizar</a>
-            <h2>Voto</h2>
-        <a href="eleitores" class="btn btn-primary me-3 mt-3">Vizualizar</a>
+        <div class="mt-5 row-gap-5 d-flex justify-content-between flex-wrap border border-success p-5">
+            <div class="col-6 container">
+                <h2>Alunos</h2>
+                <a href="/aluno/visualizar" class="btn btn-primary ">Visualizar</a>
+                <a href="/aluno/inserir" class="btn btn-success ">Adicionar</a>
+            </div>
+            <div class="col-6 container">
+                <h2>Professores</h2>
+                <a href="" class="btn btn-primary ">Visualizar</a>
+                <a href="" class="btn btn-success ">Adicionar</a>
+            </div>
+            <div class="col-6 container">
+                <h2>Curso</h2>
+                <a href="" class="btn btn-primary ">Visualizar</a>
+                <a href="" class="btn btn-success ">Adicionar</a>
+            </div>
+            <div class="col-6 container">
+                <h2>Matrícula</h2>
+                <a href="" class="btn btn-primary ">Visualizar</a>
+                <a href="" class="btn btn-success ">Adicionar</a>
+            </div>
         </div>
     </div>
+
+    <footer class="fixed-bottom d-flex justify-content-center">
+        <p>Desenvolvido por Henri Barboza</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-</body> 
+</body>
 
 </html>

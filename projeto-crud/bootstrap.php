@@ -12,7 +12,16 @@ $r = new Php\ProjetoBanco\Router($metodo, $caminho);
 
 $r->get('/', 'Php\ProjetoBanco\Controllers\HomeController@index');
 
+# Aluno
 
+$r->get('/aluno/inserir',
+    'Php\ProjetoBanco\Controllers\AlunoController@inserir');
+
+$r->post('/aluno/novo',
+    'Php\ProjetoBanco\Controllers\AlunoController@novo');
+
+$r->get('/aluno/visualizar',
+    'Php\ProjetoBanco\Controllers\AlunoController@index');
 
 
 ## Fim das rotas
