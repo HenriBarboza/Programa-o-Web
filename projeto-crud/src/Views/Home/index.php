@@ -30,8 +30,8 @@
             </div>
             <div class="col-6 container">
                 <h2>Matrícula</h2>
-                <a href="" class="btn btn-primary ">Visualizar</a>
-                <a href="" class="btn btn-success ">Adicionar</a>
+                <a href="matricula/visualizar" class="btn btn-primary ">Visualizar</a>
+                <a href="matricula/inserir" class="btn btn-success ">Adicionar</a>
             </div>
         </div>
     </div>
