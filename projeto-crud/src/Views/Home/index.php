@@ -20,8 +20,8 @@
             </div>
             <div class="col-6 container">
                 <h2>Professores</h2>
-                <a href="" class="btn btn-primary ">Visualizar</a>
-                <a href="" class="btn btn-success ">Adicionar</a>
+                <a href="/professor/visualizar" class="btn btn-primary ">Visualizar</a>
+                <a href="/professor/inserir" class="btn btn-success ">Adicionar</a>
             </div>
             <div class="col-6 container">
                 <h2>Curso</h2>

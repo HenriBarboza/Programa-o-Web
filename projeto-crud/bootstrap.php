@@ -24,6 +24,18 @@ $r->get('/aluno/visualizar',
     'Php\ProjetoBanco\Controllers\AlunoController@index');
 
 
+# `Professor
+
+$r->get('/professor/inserir',
+    'Php\ProjetoBanco\Controllers\ProfessorController@inserir');
+
+$r->post('/professor/novo',
+    'Php\ProjetoBanco\Controllers\ProfessorController@novo');
+
+$r->get('/professor/visualizar',
+    'Php\ProjetoBanco\Controllers\ProfessorController@index');
+
+
 ## Fim das rotas
 
 $resultado = $r->handler();
