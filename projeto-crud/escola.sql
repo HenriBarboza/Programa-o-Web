@@ -39,6 +39,13 @@ create table matricula
     foreign key (id_alu) references aluno (id),
     foreign key (id_cur) references curso (id)
    );
+
+ALTER TABLE matricula
+DROP FOREIGN KEY matricula_ibfk_1;
+
+ALTER TABLE matricula
+ADD CONSTRAINT matricula_ibfk_1
+FOREIGN KEY (id_alu) REFERENCES aluno(id) ON DELETE CASCADE;
    
 insert into aluno (nome, idade, cpf) values ('João da Silva', 18, 62513025342);
 insert into aluno (nome, idade, cpf) values ('Pedro Costa', 20, 87622844101);

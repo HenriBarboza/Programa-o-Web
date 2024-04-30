@@ -24,17 +24,26 @@ if (isset($_GET['sucesso'])) {
     <a class="btn btn-secondary mt-3 ms-3" href="/">Inicio</a>
     <div class="container">
         <h1>Alunos</h1>
-        <div class="d-flex justify-content-end">
+        <!-- <p><?= $mensagem ?></p> -->
+        <?php if ($mensagem != null)
+        { ?>
+        <div class="alert alert-<?=$cor;?> alert-dismissible fade show  mt-4" role="alert">
+            <?=$mensagem;?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?=$t = ""; }?>
+        <div class="d-flex mt-3 justify-content-end">
             <a href="/aluno/inserir" class="d-flex text-center btn-lg btn btn-primary">Novo aluno</a>
         </div>
+        <br>
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Idade</th>
-                    <th scope="col">Cpf</th>
-                    <!-- <th scope="col">Ações</th> -->
+                    <th class="col">Id</th>
+                    <th class="col-5">Nome</th>
+                    <th class="col-2">Idade</th>
+                    <th class="col-2">Cpf</th>
+                    <th class="col-2 text-center">Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,6 +55,14 @@ if (isset($_GET['sucesso'])) {
                         <td><?= $c['nome'] ?></td>
                         <td><?= $c['idade'] ?></td>
                         <td><?= $c['cpf'] ?></td>
+                        <td>
+                            <a href="/aluno/editar/<?= $c['id'] ?>" class="btn btn-warning">
+                                Alterar
+                            </a>
+                            <a href="/aluno/excluir/<?= $c['id'] ?>" class="btn btn-danger">
+                                Excluir
+                            </a>
+                        </td>
                     </tr>
                     <?php
                 }

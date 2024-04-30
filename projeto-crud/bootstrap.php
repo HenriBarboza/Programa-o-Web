@@ -17,13 +17,29 @@ $r->get('/', 'Php\ProjetoBanco\Controllers\HomeController@index');
 $r->get('/aluno/inserir',
     'Php\ProjetoBanco\Controllers\AlunoController@inserir');
 
+$r->get('/aluno/editar/{id}',
+    'Php\ProjetoBanco\Controllers\AlunoController@editar');
+
+$r->post('/aluno/alterado/{id}',
+    'Php\ProjetoBanco\Controllers\AlunoController@alterado');
+
+$r->get('/aluno/excluir/{id}',
+    'Php\ProjetoBanco\Controllers\AlunoController@excluir');
+
+$r->post('/aluno/excluido/{id}',
+    'Php\ProjetoBanco\Controllers\AlunoController@excluido');
+
 $r->post('/aluno/novo',
     'Php\ProjetoBanco\Controllers\AlunoController@novo');
+    
+$r->post('/aluno/buscar',
+    'Php\ProjetoBanco\Controllers\AlunoController@buscar');
 
 $r->get('/aluno/visualizar',
     'Php\ProjetoBanco\Controllers\AlunoController@index');
 
-
+$r->get('/aluno/visualizar/{acao}/{status}', 
+    'Php\ProjetoBanco\Controllers\AlunoController@index');
 # `Professor
 
 $r->get('/professor/inserir',
