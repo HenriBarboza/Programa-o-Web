@@ -25,18 +25,18 @@ if (isset($_GET['sucesso'])) {
     <div class="container">
         <h1>Alunos</h1>
         <!-- <p><?= $mensagem ?></p> -->
-        <?php if ($mensagem != null)
-        { ?>
-        <div class="alert alert-<?=$cor;?> alert-dismissible fade show  mt-4" role="alert">
-            <?=$mensagem;?>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        <?=$t = ""; }?>
+        <?php if ($mensagem != null) { ?>
+            <div class="alert alert-<?= $cor; ?> alert-dismissible fade show  mt-4" role="alert">
+                <?= $mensagem; ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?= $t = "";
+        } ?>
         <div class="d-flex mt-3 justify-content-end">
             <a href="/aluno/inserir" class="d-flex text-center btn-lg btn btn-primary">Novo aluno</a>
         </div>
         <br>
-        <table class="table">
+        <table class="table table-stripped table-hover" id="tabela">
             <thead>
                 <tr>
                     <th class="col">Id</th>
@@ -70,10 +70,19 @@ if (isset($_GET['sucesso'])) {
             </tbody>
         </table>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        var table = new DataTable('#tabela', {
+            language: {
+                url: 'https://cdn.datatables.net/plug-ins/2.0.6/i18n/pt-BR.json',
+            },
+        });
+    </script>
 </body>
 
 </html>
