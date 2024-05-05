@@ -84,6 +84,27 @@ $r->post('/curso/novo',
 $r->get('/curso/visualizar',
     'Php\ProjetoBanco\Controllers\CursoController@index');
 
+$r->get('/curso/editar/{id}',
+    'Php\ProjetoBanco\Controllers\CursoController@editar');
+
+$r->post('/curso/alterado/{id}',
+    'Php\ProjetoBanco\Controllers\CursoController@alterado');
+
+$r->get('/curso/excluir/{id}',
+    'Php\ProjetoBanco\Controllers\CursoController@excluir');
+
+$r->post('/curso/excluido/{id}',
+    'Php\ProjetoBanco\Controllers\CursoController@excluido');
+
+$r->post('/curso/novo',
+    'Php\ProjetoBanco\Controllers\CursoController@novo');
+    
+$r->post('/curso/buscar',
+    'Php\ProjetoBanco\Controllers\CursoController@buscar');
+
+$r->get('/curso/visualizar/{acao}/{status}', 
+    'Php\ProjetoBanco\Controllers\CursoController@index');
+
 # `matricula
 
 $r->get('/matricula/inserir',
