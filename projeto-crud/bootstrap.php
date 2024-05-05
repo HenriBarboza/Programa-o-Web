@@ -51,6 +51,28 @@ $r->post('/professor/novo',
 $r->get('/professor/visualizar',
     'Php\ProjetoBanco\Controllers\ProfessorController@index');
 
+$r->get('/professor/editar/{id}',
+    'Php\ProjetoBanco\Controllers\ProfessorController@editar');
+
+$r->post('/professor/alterado/{id}',
+    'Php\ProjetoBanco\Controllers\ProfessorController@alterado');
+
+$r->get('/professor/excluir/{id}',
+    'Php\ProjetoBanco\Controllers\ProfessorController@excluir');
+
+$r->post('/professor/excluido/{id}',
+    'Php\ProjetoBanco\Controllers\ProfessorController@excluido');
+
+$r->post('/professor/novo',
+    'Php\ProjetoBanco\Controllers\ProfessorController@novo');
+    
+$r->post('/professor/buscar',
+    'Php\ProjetoBanco\Controllers\ProfessorController@buscar');
+
+$r->get('/professor/visualizar/{acao}/{status}', 
+    'Php\ProjetoBanco\Controllers\ProfessorController@index');
+
+
 # `Curso
 
 $r->get('/curso/inserir',

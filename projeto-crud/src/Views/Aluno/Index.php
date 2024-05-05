@@ -24,7 +24,6 @@ if (isset($_GET['sucesso'])) {
     <a class="btn btn-secondary mt-3 ms-3" href="/">Inicio</a>
     <div class="container">
         <h1>Alunos</h1>
-        <!-- <p><?= $mensagem ?></p> -->
         <?php if ($mensagem != null) { ?>
             <div class="alert alert-<?= $cor; ?> alert-dismissible fade show  mt-4" role="alert">
                 <?= $mensagem; ?>
