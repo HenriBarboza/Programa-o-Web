@@ -69,7 +69,7 @@ private Conexao $conexao;
     public function consultarPorId($id)
     {
         try {
-            $sql = "SELECT * FROM curso WHERE id = :id";
+            $sql = "SELECT curso.*, professor.nome as nome_professor FROM curso INNER JOIN professor ON curso.id_professor = professor.id WHERE curso.id = :id";
             $p = $this->conexao->getConexao()->prepare($sql);
             $p->bindValue(":id", $id);
             $p->execute();

@@ -1,14 +1,3 @@
-<?php
-// require '../src/Views/cabecalho.php';
-
-if (isset($_GET['sucesso'])) {
-    echo "<p>" . $_GET['sucesso'] . "</p>";
-} elseif (isset($_GET['falha'])) {
-    echo "<p>" . $_GET['falha'] . "</p>";
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 

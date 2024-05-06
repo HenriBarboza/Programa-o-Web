@@ -16,9 +16,13 @@
         <form action="/curso/excluido/<?= $resultado['id'] ?>" method="post">
             <div class="row">
                 <div class="col-6">
-                    <label for="id_professor" class="form-label">Id do Professor:</label>
-                    <input type="text" disabled value="<?= $resultado['id_professor'] ?>" name="id_professor"
-                        class="form-control" required>
+                <label for="id_professor" class="form-label">Professor:</label><br>
+                    <select disabled name="id_professor" class="form-select">
+                        <option value="<?= $resultado['id_professor'] ?>" selected><?= $resultado['nome_professor'] ?></option>
+                        <?php while($c = $resultadoProfessor->fetch(PDO::FETCH_ASSOC)) { ?>
+                            <option value="<?= $c['id'];?>"><?=$c['nome']; ?></option>
+                            <?php }?>
+                    </select>
                 </div>
                 <div class="col-6">
                     <label for="nome" class="form-label">Nome:</label>

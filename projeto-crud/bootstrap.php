@@ -116,6 +116,26 @@ $r->post('/matricula/novo',
 $r->get('/matricula/visualizar',
     'Php\ProjetoBanco\Controllers\MatriculaController@index');
 
+$r->get('/matricula/editar/{id}',
+    'Php\ProjetoBanco\Controllers\MatriculaController@editar');
+
+$r->post('/matricula/alterado/{id}',
+    'Php\ProjetoBanco\Controllers\MatriculaController@alterado');
+
+$r->get('/matricula/excluir/{id}',
+    'Php\ProjetoBanco\Controllers\MatriculaController@excluir');
+
+$r->post('/matricula/excluido/{id}',
+    'Php\ProjetoBanco\Controllers\MatriculaController@excluido');
+
+$r->post('/matricula/novo',
+    'Php\ProjetoBanco\Controllers\MatriculaController@novo');
+    
+$r->post('/matricula/buscar',
+    'Php\ProjetoBanco\Controllers\MatriculaController@buscar');
+
+$r->get('/matricula/visualizar/{acao}/{status}', 
+    'Php\ProjetoBanco\Controllers\MatriculaController@index');
 
 ## Fim das rotas
 

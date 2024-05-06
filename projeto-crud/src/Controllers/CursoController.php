@@ -3,6 +3,7 @@
 namespace Php\ProjetoBanco\Controllers;
 
 use Php\ProjetoBanco\Models\DAO\CursoDAO;
+use Php\ProjetoBanco\Models\DAO\ProfessorDAO;
 use Php\ProjetoBanco\Models\Domain\Curso;
 
 
@@ -41,6 +42,8 @@ class CursoController
 
     public function inserir($params)
     {
+        $professorDAO = new ProfessorDAO;
+        $resultadoProfessor = $professorDAO->consultar(); # Utilizado para buscar os nomes dos professores na hora de inserção
         require_once ("../src/Views/Curso/Adicionar.php");
     }
 
@@ -59,6 +62,8 @@ class CursoController
 
     public function editar($params)
     {
+        $professorDAO = new ProfessorDAO;
+        $resultadoProfessor = $professorDAO->consultar(); # Utilizado para buscar os nomes dos professores na hora de inserção
         $id = $params[1];
         $cursoDAO = new CursoDAO();
         $resultado = $cursoDAO->consultarPorId($id);
@@ -78,6 +83,8 @@ class CursoController
 
     public function excluir($params)
     {
+        $professorDAO = new ProfessorDAO;
+        $resultadoProfessor = $professorDAO->consultar(); # Utilizado para buscar os nomes dos professores na hora de inserção
         $id = $params[1];
         $cursoDAO = new CursoDAO();
         $resultado = $cursoDAO->consultarPorId($id);

@@ -13,8 +13,13 @@
         <form action="/curso/novo" method="post">
             <div class="row">
                 <div class="col-6">
-                    <label for="id_professor" class="form-label">Id do Professor:</label>
-                    <input type="text" name="id_professor" class="form-control" required>
+                    <label for="id_professor" class="form-label">Professor:</label><br>
+                    <select required name="id_professor" class="form-select">
+                        <option value="" selected>...</option>
+                        <?php while($c = $resultadoProfessor->fetch(PDO::FETCH_ASSOC)) { ?>
+                            <option value="<?= $c['id'];?>"><?=$c['nome']; ?></option>
+                            <?php }?>
+                    </select>
                 </div>
                 <div class="col-6">
                     <label for="nome" class="form-label">Nome:</label>
