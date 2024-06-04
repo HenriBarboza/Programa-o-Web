@@ -1,17 +1,21 @@
 <?php
 
+use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MensagemController;
 use App\Http\Controllers\ClienteController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class,'index']);
+
+
 
 Route::get("/mensagem/{mensagem}", [MensagemController::class, 'mostrarMensagem']);
 
+
 Route::resources([
-    'clientes' => ClienteController::class
+    'clientes' => ClienteController::class,
+    'alunos' => AlunoController::class
     #produtos => ProdutoController::class
 ]);
 
