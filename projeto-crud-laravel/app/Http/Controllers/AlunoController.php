@@ -66,7 +66,7 @@ class AlunoController extends Controller
         $alunos->update($request->all());
 
         return redirect()->route('alunos.index')
-                         ->with('sucess', 'Aluno atualizado com sucesso!');
+                         ->with('success', 'Aluno atualizado com sucesso!');
     }
 
     /**
