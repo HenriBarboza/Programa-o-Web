@@ -11,14 +11,14 @@
     <h1>Formulário de Exclusão de Clientes</h1>
     <form action="{{route('clientes.destoy')}}">
         @CSRF
-        @metod('DELETE')
+        @metod('delete')
         <label for="nome">Informe o nome do cliente</label>
         <input type="text" name="nome" id="nome"><br>
         <label for="telefone">Informe o telefone do cliente</label>
         <input type="text" name="telefone" id="telefone"><br>
         <label for="email">Informe o e-mail do cliente</label>
         <input type="text" name="email" id="email"><br>
-        <button type="submit">Salvar</button>
+        <button class="btn-danger" type="submit">Excluir</button>
     </form>
 </body>
 

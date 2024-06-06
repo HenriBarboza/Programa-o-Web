@@ -42,10 +42,10 @@
                         <td>{{ $aluno->cpf}}</td>
                         <td>{{ $aluno->data_nascimento}}</td>
                         <td>
-                            <a href="" class="btn btn-warning">
+                            <a href="{{route('alunos.edit', $aluno->id) }}" class="btn btn-warning">
                                 Alterar
                             </a>
-                            <a href="" class="btn btn-danger">
+                            <a href="{{route('alunos.delete', $aluno->id) }}" class="btn btn-danger">
                                 Excluir
                             </a>
                         </td>

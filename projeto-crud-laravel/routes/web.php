@@ -13,6 +13,7 @@ Route::get('/', [HomeController::class,'index']);
 Route::get("/mensagem/{mensagem}", [MensagemController::class, 'mostrarMensagem']);
 
 
+
 Route::resources([
     'clientes' => ClienteController::class,
     'alunos' => AlunoController::class
@@ -20,3 +21,5 @@ Route::resources([
 ]);
 
 Route::get('/clientes/delete/{id}', [ClienteController::class, 'delete']);
+
+Route::get('/alunos/delete/{id}', [AlunoController::class, 'delete'])->name('alunos.delete');

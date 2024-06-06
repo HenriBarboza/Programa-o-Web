@@ -37,7 +37,7 @@ class AlunoController extends Controller
         ]);
 
         return redirect()->route('alunos.index')
-                         ->with('success', "Cliente criado com sucesso");
+                         ->with('success', "Aluno criado com sucesso");
     }
 
     /**
@@ -53,8 +53,8 @@ class AlunoController extends Controller
      */
     public function edit(string $id)
     {
-        $aluno = Aluno::findOrFail($id);
-        return view('aluno.edit', compact('aluno'));
+        $alunos = Aluno::findOrFail($id);
+        return view('aluno.edit', compact('alunos'));
     }
 
     /**
@@ -62,14 +62,27 @@ class AlunoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $alunos = Aluno::findOrFail($id);
+        $alunos->update($request->all());
+
+        return redirect()->route('alunos.index')
+                         ->with('sucess', 'Aluno atualizado com sucesso!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
+    public function delete(string $id){
+        $alunos = Aluno::findOrFail($id);
+        return view('aluno.delete', compact('alunos')); 
+    }
+
     public function destroy(string $id)
     {
-        //
+        $alunos = Aluno::findOrFail($id);
+        $alunos->delete();
+
+        return redirect()->route('alunos.index')
+                         ->with('success', 'Aluno deletado com sucesso!');
     }
 }
