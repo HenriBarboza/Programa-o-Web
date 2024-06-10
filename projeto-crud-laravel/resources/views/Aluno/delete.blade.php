@@ -12,7 +12,7 @@
 <body>
     <a class="btn btn-secondary mt-3 ms-3" href="/">Inicio</a>
     <main class="container">
-        <h1>Escluir Aluno</h1>
+        <h1>Excluir Aluno</h1>
         <h3>Tem certeza que deseja excluir esse aluno</h3>
         <div class="row">
             <div class="col-6">
